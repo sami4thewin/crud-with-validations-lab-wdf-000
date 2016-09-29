@@ -103,19 +103,19 @@ RSpec.describe SongsController, type: :controller do
     end
   end
 
-  context "destroying a song" do
-    let(:song) { Song.create!(valid_attributes) }
-    before do
-      delete :destroy, { id: song.id }
-    end
-
-    it "destroys the requested song" do
-      expect(Song.count).to eq(0)
-    end
-
-    it "redirects to the songs list" do
-      expect(response).to redirect_to(songs_url)
-    end
-  end
+  # context "destroying a song" do
+  #   let(:song) { Song.create!(valid_attributes) }
+  #   before do
+  #     delete :destroy, { id: song.id }
+  #   end
+  #
+  #   it "destroys the requested song" do
+  #     expect(Song.count).to eq(0)
+  #   end
+  #
+  #   it "redirects to the songs list" do
+  #     expect(response).to redirect_to(songs_url)
+  #   end
+  # end
 
 end
